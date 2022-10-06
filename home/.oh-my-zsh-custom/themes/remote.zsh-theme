@@ -6,8 +6,8 @@ function parse_host_environment {
     case "$(hostname)" in
         *.local)
             ;&
-        *.staging.*)
-            host_environment="staging"
+        *.uat.*)
+            host_environment="uat"
             color="$fg_bold[green]"
             ;;
         *qa*)
@@ -27,7 +27,7 @@ function color_prompt {
     case "$(hostname)" in
         *.local)
             ;&
-        *.staging.*)
+        *.uat.*)
             background="$bg[green]"
             ;;
         *qa*)
